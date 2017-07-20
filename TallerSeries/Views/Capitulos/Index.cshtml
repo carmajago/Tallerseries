@@ -1,0 +1,46 @@
+﻿@model IEnumerable<TallerSeries.Models.Capitulo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="col-lg-12">
+    
+
+ @foreach (var item in Model) {
+    <div class="col-lg-3" style="border:1px solid">     
+        <p>
+            @Html.DisplayFor(modelItem => item.temporada.nombre)
+        </p>
+        <p>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </p>
+        <p>
+            @Html.DisplayFor(modelItem => item.numero_cap)
+        </p>
+        <p>
+            @Html.DisplayFor(modelItem => item.valor)
+        </p>
+        <p>
+            @Html.DisplayFor(modelItem => item.imagen)
+        </p>
+        <p>
+            @Html.DisplayFor(modelItem => item.video)
+        </p>
+        <p>
+            @Html.DisplayFor(modelItem => item.fecha_publicacion)
+        </p>
+        <p>
+            @Html.DisplayFor(modelItem => item.valoracion)
+        </p>
+        
+   
+</div>
+}
+
+</div>
